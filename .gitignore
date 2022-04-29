@@ -1,32 +1,20 @@
-# Prerequisites
-*.d
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+<h1>This is a Heading</h1>
+<p>This is a paragraph.</p>
 
-# Precompiled Headers
-*.gch
-*.pch
+<button>
+{
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+<a href="http://www.google.com/">
+   <button>Visit Google</button>
+</a>
 
-# Fortran module files
-*.mod
-*.smod
 
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
+</body>
+</html>
