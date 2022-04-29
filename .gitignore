@@ -1,32 +1,28 @@
-# Prerequisites
-*.d
+package blake2b
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+import (
+	"crypto"
+	"hash"
+)
 
-# Precompiled Headers
-*.gch
-*.pch
+func init() {
+	newHash256 := func() hash.Hash {
+		h, _ := New256(nil)
+		return h
+	}
+	newHash384 := func() hash.Hash {
+		h, _ := New384(nil)
+		return h
+	}
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+        newHash512 := func() hash.Hash {
+		h, _ := New512(nil)
+		return h
+	}
 
-# Fortran module files
-*.mod
-*.smod
+}
 
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
+	crypto.RegisterHash(crypto.BLAKE2b_256, newHash256)
+	crypto.RegisterHash(crypto.BLAKE2b_384, newHash384)
+	crypto.RegisterHash(crypto.BLAKE2b_512, newHash512)
+}
